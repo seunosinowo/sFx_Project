@@ -1,4 +1,4 @@
-import { Search, Menu, Bell } from "lucide-react"
+import { Search, Menu, Bell, ChevronDown } from "lucide-react"
 // Using standard img in place of next/image for Vite React
 
 export function Header({ onToggleSidebar }: { onToggleSidebar: () => void }) {
@@ -36,14 +36,23 @@ export function Header({ onToggleSidebar }: { onToggleSidebar: () => void }) {
         </button>
 
         <div className="flex items-center gap-3 pl-4 border-l border-gray-200">
-          <div className="text-right hidden sm:block">
-            <p className="text-sm font-semibold text-gray-900">Martha Chikume</p>
-            <p className="text-xs text-gray-500">ID: 123467</p>
+          <div className="w-10 h-10 rounded-full overflow-hidden">
+            <img
+              src="https://api.dicebear.com/7.x/avataaars/svg?seed=Martins"
+              alt="Martins"
+              width={40}
+              height={40}
+            />
           </div>
-          <div className="w-10 h-10 bg-gray-300 rounded-full overflow-hidden">
-            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Martha" alt="Martha" width={40} height={40} />
+
+          <div className="text-left hidden sm:block">
+            <p className="text-sm font-semibold text-gray-900">Martins Chidume</p>
+            <p className="text-xs text-gray-500">ID: 123456</p>
           </div>
-          <button className="text-gray-400 hover:text-gray-600">⋮</button>
+
+          <button className="text-gray-400 hover:text-gray-600">
+            <ChevronDown size={18} />
+          </button>
         </div>
       </div>
     </header>
