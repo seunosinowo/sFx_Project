@@ -10,7 +10,7 @@ export function Dashboard() {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Left Sidebar */}
-      <Sidebar isSidebarOpen={isSidebarOpen} />
+      <Sidebar isSidebarOpen={isSidebarOpen} onOpenChange={setIsSidebarOpen} />
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
